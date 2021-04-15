@@ -1,7 +1,7 @@
 /*
 CSC 205AC #37531
 Program 2: Inheritance and Polymorphism
-Author: Frank Lin 36680188
+Authors: Frank Lin 36680188 && todo: Trevor add your name and ID here
 Description: <of the file contents>
  */
 
