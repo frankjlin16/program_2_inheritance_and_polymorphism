@@ -1,7 +1,7 @@
 /*
 CSC 205AC #37531
 Program 2: Inheritance and Polymorphism
-Authors: Frank Lin 36680188 && todo: Trevor add your name and ID here
+Authors: Frank Lin 36680188 && Trevor Ransom 36789334
 Description: Simulate the inner workings of a bank account.
  */
 
@@ -10,17 +10,16 @@ package main;
 public abstract class BankAccount {
 
     //data
-    private String accountNumber;
-    private int balance, credit, debit, fees; //in terms of pennies
-    private double interestRate;
+    protected String accountNumber = "0000-0000-0000-0000";
+    protected int balance, credit, debit, fees; //in terms of pennies
+    protected double interestRate;
 
-    //todo: figure out WTF this is suppose to do
+
     boolean credit(int amount) {
-        balance += amount; //todo: is this what requirements mean?
+        balance += amount;
         return true;
     }
 
-    //todo: figure out WTF this is suppose to do
     //debit amounts will be subtracted from the balance
     //will return false if the transaction cannot be made because of insufficient balance or insufficient credit limit.
     //Otherwise they will return true.
@@ -57,4 +56,6 @@ public abstract class BankAccount {
 
     //return information about this account in String form
     abstract String getAccountInfo();
+
+
 }
