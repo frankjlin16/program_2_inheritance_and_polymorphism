@@ -42,7 +42,7 @@ public abstract class BankAccount {
 
     //returns interesting rate of this account
     public double getInterestRate() {
-        return interestRate;
+        return this.interestRate * 100;
     }
 
     //sets the interest rate of this account
