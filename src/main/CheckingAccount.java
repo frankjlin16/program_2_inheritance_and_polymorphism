@@ -1,7 +1,5 @@
 package main;
 
-import com.sun.glass.ui.Pixels;
-
 public class CheckingAccount extends BankAccount {
 
     //variables
