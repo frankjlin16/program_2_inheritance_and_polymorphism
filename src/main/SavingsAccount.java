@@ -2,6 +2,7 @@ package main;
 
 public class SavingsAccount extends BankAccount {
 
+    //apply debit to the savings account
     @Override
     public boolean debit(int amount) {
         if (this.balance >= amount) {
@@ -11,11 +12,13 @@ public class SavingsAccount extends BankAccount {
         return false; //insufficient funds
     }
 
+    //apply interesting to the savings account
     @Override
     public void applyInterest() {
         this.balance += (int) (this.balance * this.interestRate);
     }
 
+    //returns account information of this savings account
     @Override
     public String getAccountInfo() {
         return "Account type   : Savings" +

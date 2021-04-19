@@ -11,7 +11,7 @@ public abstract class BankAccount {
 
     //data
     protected String accountNumber = "0000-0000-0000-0000";
-    protected int balance, credit, debit, fees; //in terms of pennies
+    protected int balance; //in terms of pennies
     protected double interestRate;
 
 
