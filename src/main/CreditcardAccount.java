@@ -15,15 +15,23 @@ public class CreditcardAccount extends BankAccount {
         return false; //insufficient funds
     }
 
+    //applies credit to the credit card
+    @Override
+    public boolean credit(int amount) {
+        balance += amount;
+        creditLimit += amount;
+        return true;
+    }
+
+
     @Override
     public void applyInterest() {
-        if (this.balance > 0) {
-            this.interestRate = 0;
-        } else {
+        if (this.balance < 0) {
             this.balance = (int) (this.balance + (this.balance * this.interestRate));
         }
     }
 
+    //returns information about the account
     @Override
     public String getAccountInfo() {
         return

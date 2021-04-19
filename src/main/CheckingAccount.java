@@ -7,11 +7,9 @@ public class CheckingAccount extends BankAccount {
 
     @Override
     public boolean debit(int amount) {
+        this.balance -= amount;
         if (this.balance < 0) {
-            this.balance -= amount;
-            this.overdraftFee += fees;
-        } else {
-            this.balance -= amount;
+            this.balance -= this.overdraftFee;
         }
         return true;
     }
@@ -33,7 +31,7 @@ public class CheckingAccount extends BankAccount {
                         "\nAccount #     : " + this.accountNumber +
                         "\nBalance       : " + "$" + String.format("%.2f", (double) this.balance / 100) +
                         "\nInterest rate : " + String.format("%.2f", this.getInterestRate()) + "%" +
-                        "\nOverdraft fee : " + "$" + this.getOverdraftFee();
+                        "\nOverdraft fee : " + "$" + String.format("%.2f", (double) this.getOverdraftFee() / 100);
     }
 
     public void setOverdraftFee(int overdraftFee) {
@@ -41,6 +39,6 @@ public class CheckingAccount extends BankAccount {
     }
 
     public int getOverdraftFee() {
-        return overdraftFee * 100;
+        return overdraftFee;
     }
 }

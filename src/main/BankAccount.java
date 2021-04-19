@@ -1,7 +1,7 @@
 /*
 CSC 205AC #37531
 Program 2: Inheritance and Polymorphism
-Authors: Frank Lin 36680188 && Trevor Ransom 36789334
+Authors: Frank Lin 36680188 (Section 37531) && Trevor Ransom 36789334 (Section 12247)
 Description: Simulate the inner workings of a bank account.
  */
 
